@@ -127,6 +127,7 @@ cat >> ~/updchk.sh << "EOF"
                 ;;
         esac
     done
+fi
 EOF
 chmod +x ~/updchk.sh
 echo -e '\e[1m\e[34m'"[INFO]" '\e(B\e[m'"Adding reminder script to ~/.bashrc..."
