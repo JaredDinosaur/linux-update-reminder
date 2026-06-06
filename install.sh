@@ -92,7 +92,7 @@ EOF
 echo "sinceupd=\$(( curdate - lastupdate ))" >> ~/updchk.sh
 echo "if [[ \$sinceupd -gt $delay ]]; then" >> ~/updchk.sh
 echo "    loop=1" >> ~/updchk.sh
-echo "    while [[ $loop == 1 ]]; do" >> ~/updchk.sh
+echo "    while [[ \$loop == 1 ]]; do" >> ~/updchk.sh
 cat >> ~/updchk.sh << "EOF"
         clear
         echo -e '\e[3m'"You've not updated your system in a while!"'\e(B\e[m'
@@ -103,7 +103,7 @@ cat >> ~/updchk.sh << "EOF"
 EOF
 echo "        echo -e '\e[36m'\"[3]\" '\e(B\e[m'\"Snooze reminders for $delay days\"" >> ~/updchk.sh
 echo "        read -n 1 choice" >> ~/updchk.sh
-echo "        case $choice in" >> ~/updchk.sh
+echo "        case \$choice in" >> ~/updchk.sh
 echo "            1)" >> ~/updchk.sh
 echo "                clear" >> ~/updchk.sh
 echo "                $updatecmd" >> ~/updchk.sh
