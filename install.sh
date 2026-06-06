@@ -72,10 +72,10 @@ fi
 
 # Ask user for time between reminders
 echo
-read -p "After how many days would you like to be reminded to update? (7 recommended for weekly reminders)" delay
-while ! [[ $delay =~ '^[0-9]+$' ]]; do
+read -p "After how many days would you like to be reminded to update? (7 recommended for weekly reminders) " delay
+while ! [[ $delay =~ ^[0-9]+$ ]]; do
     echo "That is not a valid number!"
-    read -p "After how many days would you like to be reminded to update?" delay
+    read -p "After how many days would you like to be reminded to update? " delay
 done
 
 # Create reminder script and add it to ~/.bashrc
