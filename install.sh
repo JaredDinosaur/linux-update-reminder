@@ -11,7 +11,7 @@ echo -e '\e[1m\e[34m'"[INFO]" '\e(B\e[m'"Checking package manager..."
 found=0
 command -v pacman >&/dev/null
 if [[ $? == 0 ]]; then
-    command -v yay
+    command -v yay &>/dev/null
     if [[ $? == 0 ]]; then
         updatecmd="yay -Syu --noconfirm"
     else
