@@ -23,9 +23,9 @@ command -v apt >&/dev/null
 if [[ $? == 0 ]]; then
     command -v nala >&/dev/null
     if [[ $? == 0 ]]; then
-        updatecmd="sudo apt update && sudo apt upgrade -y"
-    else
         updatecmd="sudo nala update && sudo nala upgrade -y"
+    else
+        updatecmd="sudo apt update && sudo apt upgrade -y"
     fi
     found=1
 fi
