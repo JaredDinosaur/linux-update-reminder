@@ -112,6 +112,9 @@ echo "                $snapupd" >> ~/updchk.sh
 echo "                date +%Y%m%d > ~/lastupdate.log" >> ~/updchk.sh
 cat >> ~/updchk.sh << "EOF"
                 echo
+                echo "Updates have completed!"
+                echo "It is recommended to reboot your system."
+                echo
                 loop=0
                 ;;
             2)
